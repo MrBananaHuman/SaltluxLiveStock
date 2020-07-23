@@ -98,11 +98,11 @@ public class TransparentPanel extends JDialog {
 	        		percent = Math.round(percent * 100 / 100.0);
 	        		StringBuilder stockString = new StringBuilder();
 	        		if(isDduckSang) {
-	        			stockString.append("¡ã ");
+	        			stockString.append("Â¡Ã£ ");
 	        			stockString.append(String.valueOf(subNum) + " (");
 	        			stockString.append(String.valueOf(percent) + "%)");
 	        		} else {
-	        			stockString.append("¡å ");
+	        			stockString.append("Â¡Ã¥ ");
 	        			stockString.append(String.valueOf(subNum) + " (");
 	        			stockString.append(String.valueOf(percent) + "%)");
 	        		}
@@ -132,16 +132,13 @@ public class TransparentPanel extends JDialog {
 					for(int i = 0; i < contentNum-1; i++) {
 						frame.getContentPane().remove(0);
 					}
-				} catch (IOException e) {
+				} catch (IOException | InterruptedException e) {
 					// TODO Auto-generated catch block
 					int contentNum = frame.getContentPane().getComponentCount();
-	        		for(int i = 0; i < contentNum; i++) {
-	        			frame.getContentPane().remove(0);
-	        		}
-	        		ryan.drawString(ryan.frame, "ERROR!", 40, 670, 1530, 0, 1, 1);
-					e.printStackTrace();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
+					for (int i = 0; i < contentNum; i++) {
+						frame.getContentPane().remove(0);
+					}
+					ryan.drawString(ryan.frame, "ERROR!", 40, 670, 1530, 0, 1, 1);
 					e.printStackTrace();
 				}
         		
