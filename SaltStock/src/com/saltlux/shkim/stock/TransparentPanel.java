@@ -95,7 +95,8 @@ public class TransparentPanel extends JDialog {
 	        			isDduckSang = true;
 	        		}
 	        		float percent = ((float)Math.abs(subNum) / Float.parseFloat(stock.startValue)) * 100;
-	        		percent = Math.round(percent * 100 / 100.0);
+//	        		percent = Math.round(percent * 100 / 100.0);
+	        		percent = (float) (Math.round(percent * 10) / 10.0);
 	        		StringBuilder stockString = new StringBuilder();
 	        		if(isDduckSang) {
 	        			stockString.append("¡ã ");
