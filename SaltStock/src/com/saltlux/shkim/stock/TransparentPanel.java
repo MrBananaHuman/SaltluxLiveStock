@@ -100,7 +100,8 @@ public class TransparentPanel extends JDialog {
 	        		StringBuilder stockString = new StringBuilder();
 	        		if(isDduckSang) {
 	        			stockString.append("¡ã ");
-	        			stockString.append(String.valueOf(subNum) + " (");
+//	        			stockString.append(String.valueOf(subNum) + " (");
+	        			stockString.append(String.valueOf(Math.abs(subNum)) + " (");
 	        			stockString.append(String.valueOf(percent) + "%)");
 	        		} else {
 	        			stockString.append("¡å ");
